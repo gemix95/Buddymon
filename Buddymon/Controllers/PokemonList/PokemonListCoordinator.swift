@@ -25,9 +25,9 @@ class PokemonListCoordinator: PokemonListViewControllerDelegate {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let pokomonList):
-
+                    self.view.updateDataSource(items: pokomonList)
                 case .failure(let error):
-
+                    print(error.localized)
                 }
             }
         }
