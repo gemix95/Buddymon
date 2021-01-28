@@ -20,6 +20,11 @@ struct Pokemon: Codable {
         guard let id = Int(stringId) else { return "" }
         return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(id).png"
     }
+    var id: String {
+        var stringId = urlDetails.replacingOccurrences(of: "https://pokeapi.co/api/v2/pokemon/", with: "")
+        stringId.removeLast(1)
+        return stringId
+    }
     
     enum CodingKeys: String, CodingKey {
         case name

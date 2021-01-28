@@ -61,20 +61,12 @@ class PokemonAPIManager {
     
     static let shared = PokemonAPIManager()
     
-    func getPokemon(listLenght: Int? = nil, pokemonDetails: Int? = nil, httpMethod: HttpMethods = .get, completion: @escaping (Result<[Pokemon]>) -> Void ) {
-  
-        if let listLenght = listLenght {
-            let queryItems = [URLQueryItem(name: "limit", value: "\(listLenght)"), URLQueryItem(name: "offset", value: "0")]
-            var urlComps = URLComponents(string: endPoint + Path.pokemon.rawValue)
-            urlComps?.queryItems = queryItems
-            self.url = urlComps?.url
-        }
-        
-        if let pokemonDetails = pokemonDetails {
-            var composingURL = URL(string: endPoint + Path.pokemon.rawValue)
-            composingURL?.appendPathComponent(String(pokemonDetails))
-            self.url = composingURL
-        }
+    func get(listLenght: Int, httpMethod: HttpMethods = .get, completion: @escaping (Result<[Pokemon]>) -> Void ) {
+
+        let queryItems = [URLQueryItem(name: "limit", value: "\(listLenght)"), URLQueryItem(name: "offset", value: "0")]
+        var urlComps = URLComponents(string: endPoint + Path.pokemon.rawValue)
+        urlComps?.queryItems = queryItems
+        self.url = urlComps?.url
         
         guard let url = self.url else {
             completion(.failure(.badUrl))
@@ -117,6 +109,61 @@ class PokemonAPIManager {
                 print("✅✅✅✅✅")
                 print("\(String(data: data, encoding: .utf8) ?? "")\n")
                 completion(.success(decodedObject.results))
+            } catch let error {
+                print("❌❌❌❌❌")
+                print("\(error.localizedDescription)\n")
+                let errore = String(data: data, encoding: .utf8) ?? ""
+                print("\n \(errore)")
+                completion(.failure(.jsonParsingError(error as! DecodingError)))
+            }
+        }).resume()
+    }
+    
+    func getPokemonDetail(id: String, httpMethod: HttpMethods = .get, completion: @escaping (Result<PokemonDetails>) -> Void ) {
+        url = URL(string: endPoint + Path.pokemon.rawValue)
+        url?.appendPathComponent(id)
+        
+        guard let url = self.url else {
+            completion(.failure(.badUrl))
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = httpMethod.rawValue
+        
+        URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
+            print("\n\n🔥🔥🔥🔥🔥")
+            print("\(request.url?.absoluteString ?? "undefined url")")
+            
+            if let body = request.httpBody {
+                print("💊 Body: \(String(data: body, encoding: .utf8) ?? "undefined httpBody")")
+            }
+            
+            guard error == nil else {
+                print("❌❌❌❌❌")
+                print("\(error?.localizedDescription ?? "undefined error")")
+                completion(.failure(.networkError(error!)))
+                return
+            }
+            
+            guard let data = data else {
+                print("❌❌❌❌❌")
+                print("NO DATA FOUND")
+                completion(.failure(.dataNotFound))
+                return
+            }
+            
+            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200 {
+                print("❌❌❌❌❌")
+                print("error \(httpResponse.statusCode)")
+                completion(.failure(.invalidStatusCode))
+            }
+            
+            do {
+                let decodedObject = try JSONDecoder().decode(PokemonDetails.self, from: data)
+                print("✅✅✅✅✅")
+                print("\(String(data: data, encoding: .utf8) ?? "")\n")
+                completion(.success(decodedObject))
             } catch let error {
                 print("❌❌❌❌❌")
                 print("\(error.localizedDescription)\n")

@@ -21,7 +21,7 @@ class PokemonListCoordinator: PokemonListViewControllerDelegate {
     
     func load() {
         view.showHud()
-        PokemonAPIManager.shared.getPokemon(listLenght: 809) { [weak self] result in
+        PokemonAPIManager.shared.get(listLenght: 809) { [weak self] result in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.view.hideHud()

@@ -34,11 +34,17 @@ class PokemonListViewController: UIViewController {
         tableView.separatorStyle = .none
         pokemonListTableView = tableView
     }
-        
+    
     func updateDataSource(items: [Pokemon]) {
-        dataSource = TableViewDataSource(cellIdentifier: PokemonListTableViewCell.customIdentifier, items: items, configureCell: { (cell, pokemon) in
-            cell.pokemon = pokemon
-        })
+        dataSource = TableViewDataSource(cellIdentifier: PokemonListTableViewCell.customIdentifier, items: items,
+                                         configureCell: { (cell, pokemon) in
+                                            cell.pokemon = pokemon
+                                         },
+                                         tappedCell: { (cell, pokemon) in
+                                            let vc = PokemonDetailsViewController()
+                                            vc.pokemon = pokemon
+                                            self.navigationController?.pushViewController(vc, animated: true)
+                                         })
         
         DispatchQueue.main.async {
             self.pokemonListTableView?.dataSource = self.dataSource

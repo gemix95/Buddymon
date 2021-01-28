@@ -10,15 +10,17 @@ import UIKit
 
 class TableViewDataSource<CELL: UITableViewCell, T>: NSObject, UITableViewDataSource, UITableViewDelegate {
     
-    public typealias ConfigureCell = (CELL, T) -> ()
+    public typealias CellHandler = (CELL, T) -> ()
     private var cellIdentifier : String!
     private var items: [T]!
-    var configureCell: ConfigureCell?
+    var configureCell: CellHandler?
+    var tappedCell: CellHandler?
     
-    init(cellIdentifier : String, items : [T], configureCell : @escaping (CELL, T) -> ()) {
+    init(cellIdentifier: String, items: [T], configureCell: CellHandler?, tappedCell: CellHandler?) {
         self.cellIdentifier = cellIdentifier
         self.items =  items
         self.configureCell = configureCell
+        self.tappedCell = tappedCell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,7 +30,7 @@ class TableViewDataSource<CELL: UITableViewCell, T>: NSObject, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CELL
         let item = self.items[indexPath.row]
-        self.configureCell?(cell, item)
+        configureCell?(cell, item)
         return cell
     }
     
@@ -44,5 +46,10 @@ class TableViewDataSource<CELL: UITableViewCell, T>: NSObject, UITableViewDataSo
             cell.contentView.alpha = 1
             cell.layer.transform = CATransform3DScale(CATransform3DIdentity, 1, 1, 1)
         }, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! CELL
+        tappedCell?(cell, self.items[indexPath.row])
     }
 }
