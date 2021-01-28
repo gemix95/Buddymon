@@ -35,4 +35,14 @@ class TableViewDataSource<CELL: UITableViewCell, T>: NSObject, UITableViewDataSo
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.contentView.alpha = 0.3
+        cell.layer.transform = CATransform3DMakeScale(0.9, 0.9, 0.9)
+        
+        UIView.animate(withDuration: 0.5, delay: 0, options: .allowUserInteraction, animations: {
+            cell.contentView.alpha = 1
+            cell.layer.transform = CATransform3DScale(CATransform3DIdentity, 1, 1, 1)
+        }, completion: nil)
+    }
 }

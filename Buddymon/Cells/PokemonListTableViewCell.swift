@@ -21,11 +21,11 @@ class PokemonListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        clipsToBounds = false
-        selectionStyle = .none
     }
 
     func prepareUI() {
+        clipsToBounds = false
+        selectionStyle = .none
         guard let pokemon = pokemon else { return }
         subviews.forEach({$0.removeFromSuperview()})
         let view = UIView()

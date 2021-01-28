@@ -20,9 +20,11 @@ class PokemonListCoordinator: PokemonListViewControllerDelegate {
     }
     
     func load() {
+        view.showHud()
         PokemonAPIManager.shared.getPokemon(listLenght: 809) { [weak self] result in
             guard let self = self else { return }
             DispatchQueue.main.async {
+                self.view.hideHud()
                 switch result {
                 case .success(let pokomonList):
                     self.view.updateDataSource(items: pokomonList)
