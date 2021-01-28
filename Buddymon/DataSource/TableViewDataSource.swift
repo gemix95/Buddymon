@@ -31,4 +31,8 @@ class TableViewDataSource<CELL: UITableViewCell, T>: NSObject, UITableViewDataSo
         self.configureCell?(cell, item)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }

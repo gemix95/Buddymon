@@ -31,13 +31,13 @@ class PokemonListViewController: UIViewController {
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(PokemonListTableViewCell.self, forCellReuseIdentifier: PokemonListTableViewCell.customIdentifier)
+        tableView.separatorStyle = .none
         pokemonListTableView = tableView
     }
         
     func updateDataSource(items: [Pokemon]) {
         dataSource = TableViewDataSource(cellIdentifier: PokemonListTableViewCell.customIdentifier, items: items, configureCell: { (cell, pokemon) in
-            cell.textLabel?.text = pokemon.name
-            print(pokemon.name)
+            cell.pokemon = pokemon
         })
         
         DispatchQueue.main.async {

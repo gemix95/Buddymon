@@ -15,7 +15,9 @@ struct Pokemon: Codable {
     let name: String
     let urlDetails: String
     var imageUrl: String {
-        guard let id = Int(urlDetails.replacingOccurrences(of: "https://pokeapi.co/api/v2/pokemon/", with: "")) else { return "" }
+        var stringId = urlDetails.replacingOccurrences(of: "https://pokeapi.co/api/v2/pokemon/", with: "")
+        stringId.removeLast(1)
+        guard let id = Int(stringId) else { return "" }
         return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(id).png"
     }
     
