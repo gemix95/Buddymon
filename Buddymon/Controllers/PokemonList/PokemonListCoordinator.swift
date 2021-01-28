@@ -29,7 +29,7 @@ class PokemonListCoordinator: PokemonListViewControllerDelegate {
                 case .success(let pokomonList):
                     self.view.updateDataSource(items: pokomonList)
                 case .failure(let error):
-                    print(error.localized)
+                    self.view.showAlert(message: error.localized)
                 }
             }
         }

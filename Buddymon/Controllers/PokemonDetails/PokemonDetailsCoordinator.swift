@@ -28,9 +28,11 @@ class PokemonDetailsCoordinator: PokemonDetailsViewControllerDelegate {
                 self.view.hideHud()
                 switch result {
                 case .success(let pokemonDetails):
-                    print("OK")
+                    self.view.loadDetails(pokemon: pokemonDetails)
                 case .failure(let error):
-                    print("error")
+                    self.view.showAlert(message: error.localized) {
+                        self.view.dismiss(animated: true, completion: nil)
+                    }
                 }
             }
         }

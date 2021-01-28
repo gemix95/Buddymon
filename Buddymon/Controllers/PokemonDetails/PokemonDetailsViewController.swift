@@ -21,5 +21,9 @@ class PokemonDetailsViewController: UIViewController {
         coordinator = PokemonDetailsCoordinator(view: self)
         coordinator?.load(pokemon: pokemon)
     }
+    
+    func loadDetails(pokemon: PokemonDetails) {
+        view.backgroundColor = pokemon.types.sorted { $0.slot < $1.slot }.first?.type.name.color
+    }
 
 }
