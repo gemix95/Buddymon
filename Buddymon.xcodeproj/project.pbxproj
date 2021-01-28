@@ -15,6 +15,9 @@
 		1725022B25C2B6C0006C85C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1725022925C2B6C0006C85C5 /* LaunchScreen.storyboard */; };
 		1725023625C2B6C0006C85C5 /* BuddymonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725023525C2B6C0006C85C5 /* BuddymonTests.swift */; };
 		1725024125C2B6C0006C85C5 /* BuddymonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725024025C2B6C0006C85C5 /* BuddymonUITests.swift */; };
+		2CBDBE9BC490E71174AB365B /* Pods_BuddymonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8041F38CD7014FB686B8653B /* Pods_BuddymonTests.framework */; };
+		9C835CEDD4DA6F5CAD43B63E /* Pods_Buddymon_BuddymonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61BA108A2AB76467A2906D6D /* Pods_Buddymon_BuddymonUITests.framework */; };
+		E36141054F3E7415EEE8BE72 /* Pods_Buddymon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C12FBDEE9ED0E6CF95F63B4 /* Pods_Buddymon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09D416B52EC9248CD31529D2 /* Pods-BuddymonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuddymonTests.debug.xcconfig"; path = "Target Support Files/Pods-BuddymonTests/Pods-BuddymonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1725021B25C2B6BF006C85C5 /* Buddymon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buddymon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1725021E25C2B6BF006C85C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1725022025C2B6BF006C85C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 		1725023C25C2B6C0006C85C5 /* BuddymonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuddymonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1725024025C2B6C0006C85C5 /* BuddymonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddymonUITests.swift; sourceTree = "<group>"; };
 		1725024225C2B6C0006C85C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C12FBDEE9ED0E6CF95F63B4 /* Pods_Buddymon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Buddymon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61BA108A2AB76467A2906D6D /* Pods_Buddymon_BuddymonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Buddymon_BuddymonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AA1F2AF5D17CAD9433CCBFB /* Pods-Buddymon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddymon.debug.xcconfig"; path = "Target Support Files/Pods-Buddymon/Pods-Buddymon.debug.xcconfig"; sourceTree = "<group>"; };
+		8041F38CD7014FB686B8653B /* Pods_BuddymonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuddymonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86E31EE6D1DDD25A5F8EFB68 /* Pods-Buddymon-BuddymonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddymon-BuddymonUITests.release.xcconfig"; path = "Target Support Files/Pods-Buddymon-BuddymonUITests/Pods-Buddymon-BuddymonUITests.release.xcconfig"; sourceTree = "<group>"; };
+		99B2557AFAB52D8A8DA54CE9 /* Pods-Buddymon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddymon.release.xcconfig"; path = "Target Support Files/Pods-Buddymon/Pods-Buddymon.release.xcconfig"; sourceTree = "<group>"; };
+		A701D25F8DFA3ECD5EBBC4AD /* Pods-Buddymon-BuddymonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buddymon-BuddymonUITests.debug.xcconfig"; path = "Target Support Files/Pods-Buddymon-BuddymonUITests/Pods-Buddymon-BuddymonUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF7C913B3CCBD530B98A20A5 /* Pods-BuddymonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuddymonTests.release.xcconfig"; path = "Target Support Files/Pods-BuddymonTests/Pods-BuddymonTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E36141054F3E7415EEE8BE72 /* Pods_Buddymon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CBDBE9BC490E71174AB365B /* Pods_BuddymonTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C835CEDD4DA6F5CAD43B63E /* Pods_Buddymon_BuddymonUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				1725023425C2B6C0006C85C5 /* BuddymonTests */,
 				1725023F25C2B6C0006C85C5 /* BuddymonUITests */,
 				1725021C25C2B6BF006C85C5 /* Products */,
+				66369D2DB02F48F3602A9212 /* Pods */,
+				B4AB45AF9A94405791CCD15F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +145,30 @@
 			path = BuddymonUITests;
 			sourceTree = "<group>";
 		};
+		66369D2DB02F48F3602A9212 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6AA1F2AF5D17CAD9433CCBFB /* Pods-Buddymon.debug.xcconfig */,
+				99B2557AFAB52D8A8DA54CE9 /* Pods-Buddymon.release.xcconfig */,
+				A701D25F8DFA3ECD5EBBC4AD /* Pods-Buddymon-BuddymonUITests.debug.xcconfig */,
+				86E31EE6D1DDD25A5F8EFB68 /* Pods-Buddymon-BuddymonUITests.release.xcconfig */,
+				09D416B52EC9248CD31529D2 /* Pods-BuddymonTests.debug.xcconfig */,
+				DF7C913B3CCBD530B98A20A5 /* Pods-BuddymonTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B4AB45AF9A94405791CCD15F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C12FBDEE9ED0E6CF95F63B4 /* Pods_Buddymon.framework */,
+				61BA108A2AB76467A2906D6D /* Pods_Buddymon_BuddymonUITests.framework */,
+				8041F38CD7014FB686B8653B /* Pods_BuddymonTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1725024525C2B6C0006C85C5 /* Build configuration list for PBXNativeTarget "Buddymon" */;
 			buildPhases = (
+				075397F4A507BF047F72A2AE /* [CP] Check Pods Manifest.lock */,
 				1725021725C2B6BF006C85C5 /* Sources */,
 				1725021825C2B6BF006C85C5 /* Frameworks */,
 				1725021925C2B6BF006C85C5 /* Resources */,
+				99366262158252830FE6517E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +195,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1725024825C2B6C0006C85C5 /* Build configuration list for PBXNativeTarget "BuddymonTests" */;
 			buildPhases = (
+				9408B6EA3E2EEFCDB474EC75 /* [CP] Check Pods Manifest.lock */,
 				1725022D25C2B6C0006C85C5 /* Sources */,
 				1725022E25C2B6C0006C85C5 /* Frameworks */,
 				1725022F25C2B6C0006C85C5 /* Resources */,
@@ -170,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1725024B25C2B6C0006C85C5 /* Build configuration list for PBXNativeTarget "BuddymonUITests" */;
 			buildPhases = (
+				654949A0032301AED178FB7A /* [CP] Check Pods Manifest.lock */,
 				1725023825C2B6C0006C85C5 /* Sources */,
 				1725023925C2B6C0006C85C5 /* Frameworks */,
 				1725023A25C2B6C0006C85C5 /* Resources */,
+				6CD86A0315CE1A3531A5DEBD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +298,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		075397F4A507BF047F72A2AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Buddymon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		654949A0032301AED178FB7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Buddymon-BuddymonUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CD86A0315CE1A3531A5DEBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Buddymon-BuddymonUITests/Pods-Buddymon-BuddymonUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Buddymon-BuddymonUITests/Pods-Buddymon-BuddymonUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Buddymon-BuddymonUITests/Pods-Buddymon-BuddymonUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9408B6EA3E2EEFCDB474EC75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BuddymonTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99366262158252830FE6517E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Buddymon/Pods-Buddymon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Buddymon/Pods-Buddymon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Buddymon/Pods-Buddymon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1725021725C2B6BF006C85C5 /* Sources */ = {
@@ -433,6 +582,7 @@
 		};
 		1725024625C2B6C0006C85C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AA1F2AF5D17CAD9433CCBFB /* Pods-Buddymon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +602,7 @@
 		};
 		1725024725C2B6C0006C85C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99B2557AFAB52D8A8DA54CE9 /* Pods-Buddymon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +622,7 @@
 		};
 		1725024925C2B6C0006C85C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09D416B52EC9248CD31529D2 /* Pods-BuddymonTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +645,7 @@
 		};
 		1725024A25C2B6C0006C85C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF7C913B3CCBD530B98A20A5 /* Pods-BuddymonTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +668,7 @@
 		};
 		1725024C25C2B6C0006C85C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A701D25F8DFA3ECD5EBBC4AD /* Pods-Buddymon-BuddymonUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +689,7 @@
 		};
 		1725024D25C2B6C0006C85C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86E31EE6D1DDD25A5F8EFB68 /* Pods-Buddymon-BuddymonUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

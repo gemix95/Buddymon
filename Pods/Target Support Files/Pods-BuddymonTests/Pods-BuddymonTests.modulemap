@@ -1,0 +1,6 @@
+framework module Pods_BuddymonTests {
+  umbrella header "Pods-BuddymonTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
