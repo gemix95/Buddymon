@@ -11,6 +11,9 @@ import SDWebImage
 class PokemonDetailsViewController: UIViewController {
     var coordinator: PokemonDetailsCoordinator?
     var pokemon: Pokemon?
+    var pokemonStatListTableView: UITableView?
+    var pokemonStatList: [EasyStatistics]?
+    private var dataSource: TableViewDataSource<UITableViewCell, EasyStatistics>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +45,49 @@ class PokemonDetailsViewController: UIViewController {
         image.widthAnchor.constraint(equalToConstant: view.bounds.width - 50).isActive = true
         image.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         image.translatesAutoresizingMaskIntoConstraints = false
+        
+        configureTableView(viewToAnchor: image)
+        updateDataSource(items: pokemon.statList)
     }
 
+    private func configureTableView(viewToAnchor: UIView) {
+        let tableView = UITableView(frame: view.frame)
+        tableView.backgroundColor = .clear
+        view.addSubview(tableView)
+        tableView.topAnchor.constraint(equalTo: viewToAnchor.bottomAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.customIdentifier)
+        tableView.separatorStyle = .none
+        pokemonStatListTableView = tableView
+    }
+    
+    func updateDataSource(items: [EasyStatistics]) {
+        dataSource = TableViewDataSource(cellIdentifier: UITableViewCell.customIdentifier, items: items, cellHeight: 55,
+                                         configureCell: { (cell, stat) in
+                                            cell.selectionStyle = .none
+                                            cell.textLabel?.text = "\(stat.name): \(stat.value)"
+                                            cell.backgroundColor = .clear
+                                            let view = UIView()
+                                            view.tag = 123
+                                            view.backgroundColor = .white
+                                            cell.subviews.forEach({if $0.tag == 123 { $0.removeFromSuperview() }})
+                                            cell.insertSubview(view, at: 0)
+                                            view.topAnchor.constraint(equalTo: cell.topAnchor, constant: 5).isActive = true
+                                            view.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: -5).isActive = true
+                                            view.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 10).isActive = true
+                                            view.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: -10).isActive = true
+                                            view.translatesAutoresizingMaskIntoConstraints = false
+                                            view.addShadow(round: 45/2)
+                                         },
+                                         tappedCell: { (_, _) in })
+        
+        DispatchQueue.main.async {
+            self.pokemonStatListTableView?.dataSource = self.dataSource
+            self.pokemonStatListTableView?.delegate = self.dataSource
+            self.pokemonStatListTableView?.reloadData()
+        }
+    }
 }

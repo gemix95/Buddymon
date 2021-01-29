@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 extension UIView {
-    func addShadow() {
+    func addShadow(round: CGFloat = 30) {
         layer.masksToBounds = false
-        layer.cornerRadius = 30
+        layer.cornerRadius = round
         layer.shadowOffset = CGSize(width: 3, height: 4)
         layer.shadowRadius = 6.0
         layer.shadowOpacity = 0.25

@@ -15,12 +15,14 @@ class TableViewDataSource<CELL: UITableViewCell, T>: NSObject, UITableViewDataSo
     private var items: [T]!
     var configureCell: CellHandler?
     var tappedCell: CellHandler?
+    var cellHeight: CGFloat
     
-    init(cellIdentifier: String, items: [T], configureCell: CellHandler?, tappedCell: CellHandler?) {
+    init(cellIdentifier: String, items: [T], cellHeight: CGFloat, configureCell: CellHandler?, tappedCell: CellHandler?) {
         self.cellIdentifier = cellIdentifier
         self.items =  items
         self.configureCell = configureCell
         self.tappedCell = tappedCell
+        self.cellHeight = cellHeight
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,7 +37,7 @@ class TableViewDataSource<CELL: UITableViewCell, T>: NSObject, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return cellHeight
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

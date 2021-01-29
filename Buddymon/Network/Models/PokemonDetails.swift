@@ -10,9 +10,26 @@ import UIKit
 
 struct PokemonDetails: Codable {
     let types: [TypeElement]
-    let height, weight: Int
+    let height, weight: Double
     let abilities: [AbilityElement]
     let stats: [Stat]
+    
+    var statList: [EasyStatistics] {
+        var stats = [EasyStatistics]()
+        stats.append(EasyStatistics(name: "Types", value: types.map({$0.type.name}).joined(separator: " / ")))
+        stats.append(EasyStatistics(name: "Height", value: "\(height/10)m"))
+        stats.append(EasyStatistics(name: "Weight", value: "\(weight/10)kg"))
+        
+        for (index, ability) in abilities.enumerated() {
+            stats.append(EasyStatistics(name: "Ability \(index)", value: ability.ability.name))
+        }
+        
+        for stat in self.stats {
+            stats.append(EasyStatistics(name: stat.stat.name, value: "\(stat.baseStat)"))
+        }
+        
+        return stats
+    }
 }
 
 struct AbilityElement: Codable {
@@ -45,4 +62,9 @@ struct Stat: Codable {
 struct TypeElement: Codable {
     let slot: Int
     let type: StatClass
+}
+
+struct EasyStatistics {
+    let name: String
+    let value: String
 }

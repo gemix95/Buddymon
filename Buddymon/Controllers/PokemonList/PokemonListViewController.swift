@@ -36,7 +36,7 @@ class PokemonListViewController: UIViewController {
     }
     
     func updateDataSource(items: [Pokemon]) {
-        dataSource = TableViewDataSource(cellIdentifier: PokemonListTableViewCell.customIdentifier, items: items,
+        dataSource = TableViewDataSource(cellIdentifier: PokemonListTableViewCell.customIdentifier, items: items, cellHeight: 100,
                                          configureCell: { (cell, pokemon) in
                                             cell.pokemon = pokemon
                                          },
