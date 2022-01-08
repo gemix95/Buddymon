@@ -7,31 +7,25 @@
 
 import Foundation
 
-
 protocol PokemonDetailsViewControllerDelegate {
-    func load(pokemon: Pokemon)
+    func load()
 }
 
-class PokemonDetailsCoordinator: PokemonDetailsViewControllerDelegate {
-    
-    let view: PokemonDetailsViewController
-    
-    public init(view: PokemonDetailsViewController) {
-        self.view = view
-    }
-    
-    func load(pokemon: Pokemon) {
-        view.showHud()
-        PokemonAPIManager.shared.getPokemonDetail(id: pokemon.id) { [weak self] result in
+class PokemonDetailsCoordinator: BaseCoordinator<PokemonDetailsViewController, Pokemon>, PokemonDetailsViewControllerDelegate {
+    func load() {
+        view.title = param.name
+        
+        context.messenger.loader.showLoading()
+        PokemonAPIManager.shared.getPokemonDetail(id: param.id) { [weak self] result in
             guard let self = self else { return }
             DispatchQueue.main.async {
-                self.view.hideHud()
+                self.context.messenger.loader.stopLoading()
                 switch result {
                 case .success(let pokemonDetails):
-                    self.view.loadDetails(pokemon: pokemonDetails)
+                    self.view.loadDetails(pokemon: pokemonDetails, imageUrl: self.param.imageUrl)
                 case .failure(let error):
-                    self.view.showAlert(message: error.localized) {
-                        self.view.dismiss(animated: true, completion: nil)
+                    self.context.messenger.alert.show(message: error.localized, confirm: "Ok") { [weak self] _ in
+                        self?.context.navigator.dismiss()
                     }
                 }
             }

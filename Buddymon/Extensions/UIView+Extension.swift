@@ -16,4 +16,15 @@ extension UIView {
         layer.shadowRadius = 6.0
         layer.shadowOpacity = 0.25
     }
+    
+    func pinEdges(to other: UIView) {
+        leadingAnchor.constraint(equalTo: other.leadingAnchor).isActive = true
+        trailingAnchor.constraint(equalTo: other.trailingAnchor).isActive = true
+        topAnchor.constraint(equalTo: other.topAnchor).isActive = true
+        bottomAnchor.constraint(equalTo: other.bottomAnchor).isActive = true
+    }
+    
+    func removeAllSubViews(tag: Int) {
+        self.subviews.filter({$0.tag == tag}).forEach({$0.removeFromSuperview()})
+    }
 }

@@ -8,39 +8,27 @@
 import UIKit
 import SDWebImage
 
-class PokemonDetailsViewController: UIViewController {
-    var coordinator: PokemonDetailsCoordinator?
-    var pokemon: Pokemon?
-    var pokemonStatListTableView: UITableView?
-    var pokemonStatList: [EasyStatistics]?
+class PokemonDetailsViewController: BaseViewController<PokemonDetailsViewControllerDelegate> {
+    private var pokemonStatListTableView: UITableView?
     private var dataSource: TableViewDataSource<UITableViewCell, EasyStatistics>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let pokemon = pokemon else { return }
-        
         view.backgroundColor = .white
-        title = pokemon.name
-        
-        coordinator = PokemonDetailsCoordinator(view: self)
-        coordinator?.load(pokemon: pokemon)
+        coordinator.load()
     }
     
-    func loadDetails(pokemon: PokemonDetails) {
+    func loadDetails(pokemon: PokemonDetails, imageUrl: String) {
         view.backgroundColor = pokemon.types.sorted { $0.slot < $1.slot }.first?.type.name.color
         
         let image =  UIImageView(frame: CGRect(x: 0, y: 0, width: view.bounds.width - 50, height: view.bounds.width - 50))
         image.center = view.center
         image.contentMode = .scaleAspectFit
         image.sd_imageTransition = .fade
-        if let string = self.pokemon?.imageUrl, let url = URL(string: string) {
-            image.sd_setImage(with: url, placeholderImage: UIImage(named: "pokeball"), options: [.continueInBackground, .retryFailed], completed: nil)
-        } else {
-            image.image = UIImage(named: "pokeball")
-        }
+        image.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "pokeball"), options: [.continueInBackground, .retryFailed], completed: nil)
         view.addSubview(image)
         
-        image.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 25).isActive = true
+        image.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
         image.heightAnchor.constraint(equalToConstant: view.bounds.width - 50).isActive = true
         image.widthAnchor.constraint(equalToConstant: view.bounds.width - 50).isActive = true
         image.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true

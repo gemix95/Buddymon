@@ -22,6 +22,19 @@
 		107DC6AC25C37F08001EACD0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107DC6AB25C37F08001EACD0 /* UIColor+Extension.swift */; };
 		107DC6B125C382DA001EACD0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107DC6B025C382DA001EACD0 /* String+Extension.swift */; };
 		107DC6B625C385AF001EACD0 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107DC6B525C385AF001EACD0 /* UIImage+Extension.swift */; };
+		10A971022789DED70027583B /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A971012789DED70027583B /* CollectionViewDataSource.swift */; };
+		10A971042789E1550027583B /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A971032789E1550027583B /* UICollectionViewCell+Extension.swift */; };
+		10A971072789E3F50027583B /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A971062789E3F50027583B /* Navigator.swift */; };
+		10A9710A2789E4440027583B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A971092789E4440027583B /* Coordinator.swift */; };
+		10A9710C2789E6490027583B /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A9710B2789E6490027583B /* Context.swift */; };
+		10A9710F2789E6900027583B /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A9710E2789E6900027583B /* Messenger.swift */; };
+		10A971112789E7880027583B /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A971102789E7880027583B /* BaseCoordinator.swift */; };
+		10A971132789E7D90027583B /* Coordinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A971122789E7D90027583B /* Coordinable.swift */; };
+		10A971152789E91F0027583B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A971142789E91F0027583B /* BaseViewController.swift */; };
+		10A971172789E9ED0027583B /* StandardNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A971162789E9ED0027583B /* StandardNavigator.swift */; };
+		10A971192789F7CE0027583B /* StandardMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A971182789F7CE0027583B /* StandardMessenger.swift */; };
+		10A9711B2789FA730027583B /* ActivityLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A9711A2789FA730027583B /* ActivityLoader.swift */; };
+		10A9711D2789FC5C0027583B /* SystemAlertMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A9711C2789FC5C0027583B /* SystemAlertMessenger.swift */; };
 		1725021F25C2B6BF006C85C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725021E25C2B6BF006C85C5 /* AppDelegate.swift */; };
 		1725022325C2B6BF006C85C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725022225C2B6BF006C85C5 /* ViewController.swift */; };
 		1725022825C2B6C0006C85C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1725022725C2B6C0006C85C5 /* Assets.xcassets */; };
@@ -67,6 +80,19 @@
 		107DC6AB25C37F08001EACD0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		107DC6B025C382DA001EACD0 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		107DC6B525C385AF001EACD0 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		10A971012789DED70027583B /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		10A971032789E1550027583B /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		10A971062789E3F50027583B /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		10A971092789E4440027583B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		10A9710B2789E6490027583B /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		10A9710E2789E6900027583B /* Messenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
+		10A971102789E7880027583B /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		10A971122789E7D90027583B /* Coordinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinable.swift; sourceTree = "<group>"; };
+		10A971142789E91F0027583B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		10A971162789E9ED0027583B /* StandardNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardNavigator.swift; sourceTree = "<group>"; };
+		10A971182789F7CE0027583B /* StandardMessenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardMessenger.swift; sourceTree = "<group>"; };
+		10A9711A2789FA730027583B /* ActivityLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLoader.swift; sourceTree = "<group>"; };
+		10A9711C2789FC5C0027583B /* SystemAlertMessenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemAlertMessenger.swift; sourceTree = "<group>"; };
 		1725021B25C2B6BF006C85C5 /* Buddymon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buddymon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1725021E25C2B6BF006C85C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1725022225C2B6BF006C85C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				107DC67425C36413001EACD0 /* TableViewDataSource.swift */,
+				10A971012789DED70027583B /* CollectionViewDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -186,6 +213,7 @@
 				107DC6AB25C37F08001EACD0 /* UIColor+Extension.swift */,
 				107DC6B025C382DA001EACD0 /* String+Extension.swift */,
 				107DC6B525C385AF001EACD0 /* UIImage+Extension.swift */,
+				10A971032789E1550027583B /* UICollectionViewCell+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -197,6 +225,40 @@
 				107DC6A625C379B5001EACD0 /* PokemonDetailsViewController.swift */,
 			);
 			path = PokemonDetails;
+			sourceTree = "<group>";
+		};
+		10A971052789E3BD0027583B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				10A9710D2789E6860027583B /* Messenger */,
+				10A971082789E4390027583B /* Coordinator */,
+				10A971062789E3F50027583B /* Navigator.swift */,
+				10A9710B2789E6490027583B /* Context.swift */,
+				10A971142789E91F0027583B /* BaseViewController.swift */,
+				10A971162789E9ED0027583B /* StandardNavigator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		10A971082789E4390027583B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				10A971092789E4440027583B /* Coordinator.swift */,
+				10A971102789E7880027583B /* BaseCoordinator.swift */,
+				10A971122789E7D90027583B /* Coordinable.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		10A9710D2789E6860027583B /* Messenger */ = {
+			isa = PBXGroup;
+			children = (
+				10A9710E2789E6900027583B /* Messenger.swift */,
+				10A971182789F7CE0027583B /* StandardMessenger.swift */,
+				10A9711A2789FA730027583B /* ActivityLoader.swift */,
+				10A9711C2789FC5C0027583B /* SystemAlertMessenger.swift */,
+			);
+			path = Messenger;
 			sourceTree = "<group>";
 		};
 		1725021225C2B6BF006C85C5 = {
@@ -224,6 +286,7 @@
 		1725021D25C2B6BF006C85C5 /* Buddymon */ = {
 			isa = PBXGroup;
 			children = (
+				10A971052789E3BD0027583B /* Navigation */,
 				107DC68225C365EC001EACD0 /* Extensions */,
 				107DC66525C3637E001EACD0 /* LifeCycle */,
 				107DC64125C35671001EACD0 /* Network */,
@@ -517,22 +580,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				107DC6B125C382DA001EACD0 /* String+Extension.swift in Sources */,
+				10A971072789E3F50027583B /* Navigator.swift in Sources */,
 				107DC64C25C35822001EACD0 /* Pokemon.swift in Sources */,
+				10A9711D2789FC5C0027583B /* SystemAlertMessenger.swift in Sources */,
 				107DC69725C375FC001EACD0 /* UIViewController+Extension.swift in Sources */,
 				107DC69C25C378AC001EACD0 /* PokemonDetails.swift in Sources */,
 				107DC68425C365FF001EACD0 /* UITableViewCell+Extension.swift in Sources */,
 				107DC64325C35773001EACD0 /* PokemonAPIManager.swift in Sources */,
+				10A971112789E7880027583B /* BaseCoordinator.swift in Sources */,
 				107DC67525C36413001EACD0 /* TableViewDataSource.swift in Sources */,
+				10A971172789E9ED0027583B /* StandardNavigator.swift in Sources */,
 				107DC67B25C36598001EACD0 /* PokemonListTableViewCell.swift in Sources */,
 				1725022325C2B6BF006C85C5 /* ViewController.swift in Sources */,
+				10A971192789F7CE0027583B /* StandardMessenger.swift in Sources */,
+				10A971132789E7D90027583B /* Coordinable.swift in Sources */,
 				107DC65B25C35EC4001EACD0 /* PokemonListCoordinator.swift in Sources */,
+				10A971152789E91F0027583B /* BaseViewController.swift in Sources */,
 				107DC6AC25C37F08001EACD0 /* UIColor+Extension.swift in Sources */,
+				10A9711B2789FA730027583B /* ActivityLoader.swift in Sources */,
 				1725021F25C2B6BF006C85C5 /* AppDelegate.swift in Sources */,
 				107DC6B625C385AF001EACD0 /* UIImage+Extension.swift in Sources */,
+				10A971022789DED70027583B /* CollectionViewDataSource.swift in Sources */,
+				10A9710C2789E6490027583B /* Context.swift in Sources */,
 				107DC69225C36E38001EACD0 /* UIView+Extension.swift in Sources */,
+				10A9710F2789E6900027583B /* Messenger.swift in Sources */,
 				107DC6A725C379B5001EACD0 /* PokemonDetailsViewController.swift in Sources */,
+				10A971042789E1550027583B /* UICollectionViewCell+Extension.swift in Sources */,
 				107DC65325C35EB4001EACD0 /* PokemonListViewController.swift in Sources */,
 				107DC6A225C379A7001EACD0 /* PokemonDetailsCoordinator.swift in Sources */,
+				10A9710A2789E4440027583B /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,13 +11,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    let navigator: Navigator = StandardNavigator()
+    let messenger: Messenger = StandardMessenger()
+    
+    private lazy var context = Context(navigator: navigator, messenger: messenger)
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        let pokemonListVC = PokemonListViewController()
-        let nv = UINavigationController(rootViewController: pokemonListVC)
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = nv
+        window = navigator.start(coordinator: PokemonListCoordinator(context: context, param: Void()), animated: false)
         window?.makeKeyAndVisible()
         
         return true

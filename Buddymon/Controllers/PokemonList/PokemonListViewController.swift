@@ -7,19 +7,15 @@
 
 import UIKit
 
-class PokemonListViewController: UIViewController {
-    
-    var coordinator: PokemonListCoordinator?
-    var pokemonListTableView: UITableView?
-    var pokemonList: [Pokemon]?
+class PokemonListViewController: BaseViewController<PokemonListViewControllerDelegate> {
+    private var pokemonListTableView: UITableView?
     private var dataSource: TableViewDataSource<PokemonListTableViewCell, Pokemon>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Buddymon"
         configureTableView()
-        coordinator = PokemonListCoordinator(view: self)
-        coordinator?.load()
+        coordinator.load()
     }
     
     private func configureTableView() {
@@ -40,10 +36,8 @@ class PokemonListViewController: UIViewController {
                                          configureCell: { (cell, pokemon) in
                                             cell.pokemon = pokemon
                                          },
-                                         tappedCell: { (cell, pokemon) in
-                                            let vc = PokemonDetailsViewController()
-                                            vc.pokemon = pokemon
-                                            self.navigationController?.pushViewController(vc, animated: true)
+                                         tappedCell: { [weak self] (cell, pokemon) in
+                                            self?.coordinator.goToDetail(pokemon: pokemon)
                                          })
         
         DispatchQueue.main.async {
