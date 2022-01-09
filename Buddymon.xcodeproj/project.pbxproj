@@ -226,18 +226,19 @@
 		10444DCE278B78150087EF3A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				10444DD1278B78630087EF3A /* ViewError.swift */,
 				10444DCF278B78280087EF3A /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		10444DDD278B82F90087EF3A /* Controllers */ = {
+		10444DDD278B82F90087EF3A /* ControllersTests */ = {
 			isa = PBXGroup;
 			children = (
 				10444DDE278B830B0087EF3A /* PokemonListViewControllerTests.swift */,
 				1015490A278B88CE00E4AE7A /* PokemonDetailsViewControllerTests.swift */,
 			);
-			path = Controllers;
+			path = ControllersTests;
 			sourceTree = "<group>";
 		};
 		107DC65025C35E93001EACD0 /* Controllers */ = {
@@ -388,13 +389,12 @@
 		1725023425C2B6C0006C85C5 /* BuddymonTests */ = {
 			isa = PBXGroup;
 			children = (
-				10444DDD278B82F90087EF3A /* Controllers */,
 				10444DCE278B78150087EF3A /* Extensions */,
 				10444DCD278B77F40087EF3A /* Mock */,
+				10444DDD278B82F90087EF3A /* ControllersTests */,
 				10444DCA278B776D0087EF3A /* CellsTests */,
 				1725023525C2B6C0006C85C5 /* BuddymonTests.swift */,
 				1725023725C2B6C0006C85C5 /* Info.plist */,
-				10444DD1278B78630087EF3A /* ViewError.swift */,
 			);
 			path = BuddymonTests;
 			sourceTree = "<group>";
