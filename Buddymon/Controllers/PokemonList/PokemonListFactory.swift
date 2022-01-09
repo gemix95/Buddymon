@@ -12,7 +12,6 @@ class PokemonListFactory {
     func makeCollectionView(width: CGFloat) -> UICollectionView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: width, height: 100)
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         

@@ -22,7 +22,7 @@ class PokemonListCoordinator: BaseCoordinator<PokemonListViewController, Pokemon
                 self.context.messenger.loader.stopLoading()
                 switch result {
                 case .success(let pokomonList):
-                    self.view.updateDataSource(items: pokomonList.results)
+                    self.view.setupDataSource(items: pokomonList.results)
                 case .failure(let error):
                     self.context.messenger.alert.show(message: error.localized)
                 }

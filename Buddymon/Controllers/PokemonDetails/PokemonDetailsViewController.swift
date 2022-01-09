@@ -10,7 +10,7 @@ import SDWebImage
 
 class PokemonDetailsViewController: BaseViewController<PokemonDetailsViewControllerDelegate> {
     private lazy var pokemonStatCollectionView = coordinator.makeCollectionView(width: view.frame.width)
-    private var dataSource: CollectionViewDataSource<PokemonStatsCollectionViewCell, EasyStatistics>?
+    private var dataSource: CollectionViewDataSource?
     private var imageView = UIImageView()
     
     override func viewDidLoad() {
@@ -21,44 +21,41 @@ class PokemonDetailsViewController: BaseViewController<PokemonDetailsViewControl
         coordinator.load()
     }
     
-    func configureMainImage(pokemon: PokemonDetails, imageUrl: String) {
-        view.backgroundColor = pokemon.types.sorted { $0.slot < $1.slot }.first?.type.name.color
-        
-        imageView =  UIImageView(frame: CGRect(x: 0, y: 0, width: view.bounds.width - 50, height: view.bounds.width - 50))
-        imageView.center = view.center
-        imageView.contentMode = .scaleAspectFit
-        imageView.sd_imageTransition = .fade
-        imageView.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "pokeball"), options: [.continueInBackground, .retryFailed], completed: nil)
-        view.addSubview(imageView)
-        
-        imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: view.bounds.width - 50).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: view.bounds.width - 50).isActive = true
-        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
     func loadDetails(pokemon: PokemonDetails, imageUrl: String) {
-        configureColleetionView(viewToAnchor: imageView)
-        updateDataSource(items: pokemon.statList)
+        view.backgroundColor = pokemon.types.sorted { $0.slot < $1.slot }.first?.type.name.color
+        configureColleetionView()
+        setupDataSource(items: pokemon.statList, imageUrl: imageUrl)
     }
 
-    private func configureColleetionView(viewToAnchor: UIView) {
+    private func configureColleetionView() {
         view.addSubview(pokemonStatCollectionView)
-        pokemonStatCollectionView.topAnchor.constraint(equalTo: viewToAnchor.bottomAnchor).isActive = true
-        pokemonStatCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        pokemonStatCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        pokemonStatCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        pokemonStatCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        pokemonStatCollectionView.pinEdges(to: view)
     }
     
-    func updateDataSource(items: [EasyStatistics]) {
-        dataSource = CollectionViewDataSource(items: items,
-                                              configureCell: { cell, stat in
-                                                    cell.configure(with: stat)
-                                              },
-                                              tappedCell: { _, _ in })
+    func setupDataSource(items: [EasyStatistics], imageUrl: String) {
         
+        let imageSection = Section(identifier: PokemonImageCollectionViewCell.customIdentifier,
+                              size: CGSize(width: view.frame.width, height: 150),
+                              section: 0,
+                              items: [imageUrl],
+                              configureCell: { cell, imageUrl in
+            if let cell = cell as? PokemonImageCollectionViewCell, let imageUrl = imageUrl as? String {
+                cell.configure(with: imageUrl)
+            }
+        }, tappedCell: { _, _ in })
+        
+        let statSection = Section(identifier: PokemonStatsCollectionViewCell.customIdentifier,
+                              size: CGSize(width: view.frame.width, height: 55),
+                              section: 1,
+                              items: items,
+                              configureCell: { cell, stat in
+            if let cell = cell as? PokemonStatsCollectionViewCell, let stat = stat as? EasyStatistics {
+                cell.configure(with: stat)
+            }
+        }, tappedCell: { _, _ in })
+        
+        dataSource = CollectionViewDataSource(sections: [imageSection, statSection])
+
         DispatchQueue.main.async {
             self.pokemonStatCollectionView.dataSource = self.dataSource
             self.pokemonStatCollectionView.delegate = self.dataSource

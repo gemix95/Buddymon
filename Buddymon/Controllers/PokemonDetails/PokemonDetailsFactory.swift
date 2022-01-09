@@ -18,6 +18,7 @@ class PokemonDetailsFactory {
         
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.register(PokemonStatsCollectionViewCell.self, forCellWithReuseIdentifier: PokemonStatsCollectionViewCell.customIdentifier)
+        collectionView.register(PokemonImageCollectionViewCell.self, forCellWithReuseIdentifier: PokemonImageCollectionViewCell.customIdentifier)
         return collectionView
     }
 }

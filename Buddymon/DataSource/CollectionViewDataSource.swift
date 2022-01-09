@@ -8,27 +8,43 @@
 import Foundation
 import UIKit
 
-class CollectionViewDataSource<C: UICollectionViewCell, T>: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
-    public typealias CellHandler = (C, T) -> ()
+public struct Section {
+    public typealias CellHandler = (UICollectionViewCell, Codable) -> ()
+    let identifier: String
+    let size: CGSize
+    let section: Int
+    let items: [Codable]
+    let configureCell: CellHandler
+    let tappedCell: CellHandler
+}
+
+class CollectionViewDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    private var sections: [Section]
+    private var scrolled: ((CGFloat) -> Void)?
     
-    private var items: [T]
-    private var configureCell: CellHandler
-    private var tappedCell: CellHandler
+    public init(sections: [Section] = [], scrolled: ((CGFloat) -> Void)? = nil) {
+        let sortedSection = sections.sorted(by: { $0.section < $1.section })
+        self.sections = sortedSection
+        self.scrolled = scrolled
+    }
     
-    public init(items: [T], configureCell: @escaping CellHandler, tappedCell: @escaping CellHandler) {
-        self.items = items
-        self.configureCell = configureCell
-        self.tappedCell = tappedCell
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        sections[indexPath.section].size
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        sections.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return sections[section].items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: C.customIdentifier, for: indexPath) as! C
-        let item = self.items[indexPath.row]
-        configureCell(cell, item)
+        let identifier = sections[indexPath.section].identifier
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
+        let item = sections[indexPath.section].items[indexPath.row]
+        sections[indexPath.section].configureCell(cell, item)
         return cell
     }
     
@@ -43,7 +59,14 @@ class CollectionViewDataSource<C: UICollectionViewCell, T>: NSObject, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! C
-        tappedCell(cell, self.items[indexPath.row])
+        guard let cell = collectionView.cellForItem(at: indexPath) else { return }
+        let item = sections[indexPath.section].items[indexPath.row]
+        sections[indexPath.section].tappedCell(cell, item)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffsetY = scrollView.contentOffset.y
+        print(contentOffsetY)
+        scrolled?(contentOffsetY)
     }
 }

@@ -10,10 +10,10 @@
 		10444CF4278B22E20087EF3A /* PokemonListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444CF3278B22E20087EF3A /* PokemonListFactory.swift */; };
 		10444CF6278B25E60087EF3A /* PokemonDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444CF5278B25E60087EF3A /* PokemonDetailsFactory.swift */; };
 		10444CF8278B28780087EF3A /* PokemonStatsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444CF7278B28780087EF3A /* PokemonStatsCollectionViewCell.swift */; };
+		10444CFA278B43DE0087EF3A /* PokemonImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444CF9278B43DE0087EF3A /* PokemonImageCollectionViewCell.swift */; };
 		107DC64C25C35822001EACD0 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107DC64B25C35822001EACD0 /* Pokemon.swift */; };
 		107DC65325C35EB4001EACD0 /* PokemonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107DC65225C35EB4001EACD0 /* PokemonListViewController.swift */; };
 		107DC65B25C35EC4001EACD0 /* PokemonListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107DC65A25C35EC4001EACD0 /* PokemonListCoordinator.swift */; };
-		107DC67525C36413001EACD0 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107DC67425C36413001EACD0 /* TableViewDataSource.swift */; };
 		107DC68425C365FF001EACD0 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107DC68325C365FF001EACD0 /* UITableViewCell+Extension.swift */; };
 		107DC69225C36E38001EACD0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107DC69125C36E38001EACD0 /* UIView+Extension.swift */; };
 		107DC69725C375FC001EACD0 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107DC69625C375FC001EACD0 /* UIViewController+Extension.swift */; };
@@ -78,10 +78,10 @@
 		10444CF3278B22E20087EF3A /* PokemonListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListFactory.swift; sourceTree = "<group>"; };
 		10444CF5278B25E60087EF3A /* PokemonDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsFactory.swift; sourceTree = "<group>"; };
 		10444CF7278B28780087EF3A /* PokemonStatsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonStatsCollectionViewCell.swift; sourceTree = "<group>"; };
+		10444CF9278B43DE0087EF3A /* PokemonImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		107DC64B25C35822001EACD0 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		107DC65225C35EB4001EACD0 /* PokemonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListViewController.swift; sourceTree = "<group>"; };
 		107DC65A25C35EC4001EACD0 /* PokemonListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListCoordinator.swift; sourceTree = "<group>"; };
-		107DC67425C36413001EACD0 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		107DC68325C365FF001EACD0 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		107DC69125C36E38001EACD0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		107DC69625C375FC001EACD0 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -216,7 +216,6 @@
 		107DC67325C363FF001EACD0 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				107DC67425C36413001EACD0 /* TableViewDataSource.swift */,
 				10A971012789DED70027583B /* CollectionViewDataSource.swift */,
 			);
 			path = DataSource;
@@ -227,6 +226,7 @@
 			children = (
 				10A97131278B1E7D0027583B /* PokemonListCollectionViewCell.swift */,
 				10444CF7278B28780087EF3A /* PokemonStatsCollectionViewCell.swift */,
+				10444CF9278B43DE0087EF3A /* PokemonImageCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -626,7 +626,6 @@
 				107DC69C25C378AC001EACD0 /* PokemonDetails.swift in Sources */,
 				107DC68425C365FF001EACD0 /* UITableViewCell+Extension.swift in Sources */,
 				10A971112789E7880027583B /* BaseCoordinator.swift in Sources */,
-				107DC67525C36413001EACD0 /* TableViewDataSource.swift in Sources */,
 				10A971172789E9ED0027583B /* StandardNavigator.swift in Sources */,
 				10A97130278B1DE80027583B /* PokemonListViewControllerDelegate.swift in Sources */,
 				1725022325C2B6BF006C85C5 /* ViewController.swift in Sources */,
@@ -652,6 +651,7 @@
 				107DC65325C35EB4001EACD0 /* PokemonListViewController.swift in Sources */,
 				107DC6A225C379A7001EACD0 /* PokemonDetailsCoordinator.swift in Sources */,
 				10444CF4278B22E20087EF3A /* PokemonListFactory.swift in Sources */,
+				10444CFA278B43DE0087EF3A /* PokemonImageCollectionViewCell.swift in Sources */,
 				10A97124278B1C030027583B /* NetworkServices.swift in Sources */,
 				10444CF6278B25E60087EF3A /* PokemonDetailsFactory.swift in Sources */,
 				10A9710A2789E4440027583B /* Coordinator.swift in Sources */,

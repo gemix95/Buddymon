@@ -11,7 +11,7 @@ public struct PokemonResponse: Codable {
     let results: [Pokemon]
 }
 
-struct Pokemon: Codable {
+struct Pokemon: Codable, Hashable {
     let name: String
     let urlDetails: String
     var imageUrl: String {
@@ -31,4 +31,3 @@ struct Pokemon: Codable {
         case urlDetails = "url"
     }
 }
-

@@ -64,7 +64,7 @@ struct TypeElement: Codable {
     let type: StatClass
 }
 
-struct EasyStatistics {
+struct EasyStatistics: Codable {
     let name: String
     let value: String
 }
