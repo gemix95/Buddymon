@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 protocol PokemonDetailsViewControllerDelegate {
     func load()
+    func makeCollectionView(width: CGFloat) -> UICollectionView
 }

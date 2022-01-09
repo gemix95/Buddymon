@@ -31,7 +31,8 @@ class PokemonListCoordinator: BaseCoordinator<PokemonListViewController, Pokemon
     }
     
     func goToDetail(pokemon: Pokemon) {
-        let coordinator = PokemonDetailsCoordinator(context: context, param: pokemon)
+        let param = PokemonDetailsParam(pokemon: pokemon, factory: PokemonDetailsFactory())
+        let coordinator = PokemonDetailsCoordinator(context: context, param: param)
         context.navigator.navigate(to: coordinator, animated: true)
     }
     

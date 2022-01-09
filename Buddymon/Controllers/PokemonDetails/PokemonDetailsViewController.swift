@@ -9,8 +9,8 @@ import UIKit
 import SDWebImage
 
 class PokemonDetailsViewController: BaseViewController<PokemonDetailsViewControllerDelegate> {
-    private var pokemonStatListTableView: UITableView?
-    private var dataSource: TableViewDataSource<UITableViewCell, EasyStatistics>?
+    private lazy var pokemonStatCollectionView = coordinator.makeCollectionView(width: view.frame.width)
+    private var dataSource: CollectionViewDataSource<PokemonStatsCollectionViewCell, EasyStatistics>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,43 +39,25 @@ class PokemonDetailsViewController: BaseViewController<PokemonDetailsViewControl
     }
 
     private func configureTableView(viewToAnchor: UIView) {
-        let tableView = UITableView(frame: view.frame)
-        tableView.backgroundColor = .clear
-        view.addSubview(tableView)
-        tableView.topAnchor.constraint(equalTo: viewToAnchor.bottomAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.customIdentifier)
-        tableView.separatorStyle = .none
-        pokemonStatListTableView = tableView
+        pokemonStatCollectionView.backgroundColor = .clear
+        view.addSubview(pokemonStatCollectionView)
+        pokemonStatCollectionView.topAnchor.constraint(equalTo: viewToAnchor.bottomAnchor).isActive = true
+        pokemonStatCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        pokemonStatCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        pokemonStatCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        pokemonStatCollectionView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     func updateDataSource(items: [EasyStatistics]) {
-        dataSource = TableViewDataSource(cellIdentifier: UITableViewCell.customIdentifier, items: items, cellHeight: 55,
-                                         configureCell: { (cell, stat) in
-                                            cell.selectionStyle = .none
-                                            cell.textLabel?.text = "\(stat.name): \(stat.value)"
-                                            cell.backgroundColor = .clear
-                                            let view = UIView()
-                                            view.tag = 123
-                                            view.backgroundColor = .white
-                                            cell.subviews.forEach({if $0.tag == 123 { $0.removeFromSuperview() }})
-                                            cell.insertSubview(view, at: 0)
-                                            view.topAnchor.constraint(equalTo: cell.topAnchor, constant: 5).isActive = true
-                                            view.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: -5).isActive = true
-                                            view.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 10).isActive = true
-                                            view.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: -10).isActive = true
-                                            view.translatesAutoresizingMaskIntoConstraints = false
-                                            view.addShadow(round: 45/2)
-                                         },
-                                         tappedCell: { (_, _) in })
+        dataSource = CollectionViewDataSource(items: items,
+                                              configureCell: { (cell, stat) in
+            cell.configure(with: stat)
+        },
+                                              tappedCell: { (_, _) in })
         
         DispatchQueue.main.async {
-            self.pokemonStatListTableView?.dataSource = self.dataSource
-            self.pokemonStatListTableView?.delegate = self.dataSource
-            self.pokemonStatListTableView?.reloadData()
+            self.pokemonStatCollectionView.dataSource = self.dataSource
+            self.pokemonStatCollectionView.delegate = self.dataSource
         }
     }
 }
