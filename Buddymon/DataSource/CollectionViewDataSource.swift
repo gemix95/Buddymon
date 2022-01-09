@@ -66,7 +66,6 @@ class CollectionViewDataSource: NSObject, UICollectionViewDelegate, UICollection
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let contentOffsetY = scrollView.contentOffset.y
-        print(contentOffsetY)
         scrolled?(contentOffsetY)
     }
 }

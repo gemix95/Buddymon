@@ -19,12 +19,6 @@ class PokemonListViewController: BaseViewController<PokemonListViewControllerDel
         coordinator.load()
     }
     
-    private func configureCollectionView() {
-        pokemonCollectionView.accessibilityIdentifier = Identifier.pokemonCollectionView.rawValue
-        view.addSubview(pokemonCollectionView)
-        pokemonCollectionView.pinEdges(to: view)
-    }
-    
     func setupDataSource(items: [Pokemon]) {
         let section = Section(identifier: PokemonListCollectionViewCell.customIdentifier,
                                        size: CGSize(width: view.frame.width, height: 100),
@@ -46,6 +40,12 @@ class PokemonListViewController: BaseViewController<PokemonListViewControllerDel
             self.pokemonCollectionView.dataSource = self.dataSource
             self.pokemonCollectionView.delegate = self.dataSource
         }
+    }
+    
+    private func configureCollectionView() {
+        pokemonCollectionView.accessibilityIdentifier = Identifier.pokemonCollectionView.rawValue
+        view.addSubview(pokemonCollectionView)
+        pokemonCollectionView.pinEdges(to: view)
     }
 }
 

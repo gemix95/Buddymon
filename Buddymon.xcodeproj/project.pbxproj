@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1015490B278B88CE00E4AE7A /* PokemonDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1015490A278B88CE00E4AE7A /* PokemonDetailsViewControllerTests.swift */; };
 		10444CF4278B22E20087EF3A /* PokemonListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444CF3278B22E20087EF3A /* PokemonListFactory.swift */; };
 		10444CF6278B25E60087EF3A /* PokemonDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444CF5278B25E60087EF3A /* PokemonDetailsFactory.swift */; };
 		10444CF8278B28780087EF3A /* PokemonStatsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444CF7278B28780087EF3A /* PokemonStatsCollectionViewCell.swift */; };
@@ -104,6 +105,7 @@
 
 /* Begin PBXFileReference section */
 		09D416B52EC9248CD31529D2 /* Pods-BuddymonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuddymonTests.debug.xcconfig"; path = "Target Support Files/Pods-BuddymonTests/Pods-BuddymonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1015490A278B88CE00E4AE7A /* PokemonDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		10444CF3278B22E20087EF3A /* PokemonListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListFactory.swift; sourceTree = "<group>"; };
 		10444CF5278B25E60087EF3A /* PokemonDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsFactory.swift; sourceTree = "<group>"; };
 		10444CF7278B28780087EF3A /* PokemonStatsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonStatsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				10444DDE278B830B0087EF3A /* PokemonListViewControllerTests.swift */,
+				1015490A278B88CE00E4AE7A /* PokemonDetailsViewControllerTests.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -732,6 +735,7 @@
 				1725023625C2B6C0006C85C5 /* BuddymonTests.swift in Sources */,
 				10444DD0278B78280087EF3A /* UIView.swift in Sources */,
 				10444DDC278B80490087EF3A /* EasyStatisticsTests.swift in Sources */,
+				1015490B278B88CE00E4AE7A /* PokemonDetailsViewControllerTests.swift in Sources */,
 				10444DCC278B77950087EF3A /* PokemonListCellTests.swift in Sources */,
 				10444DD2278B78630087EF3A /* ViewError.swift in Sources */,
 				10444DD4278B79E80087EF3A /* PokemonMock.swift in Sources */,

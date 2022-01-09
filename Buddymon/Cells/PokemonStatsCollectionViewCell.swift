@@ -14,6 +14,7 @@ class PokemonStatsCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.accessibilityIdentifier = Identifiers.statsCell.rawValue
         setupUI()
     }
     
@@ -66,5 +67,6 @@ extension PokemonStatsCollectionViewCell {
     enum Identifiers: String {
         case nameLabel
         case valueLabel
+        case statsCell
     }
 }

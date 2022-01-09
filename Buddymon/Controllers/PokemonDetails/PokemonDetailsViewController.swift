@@ -17,20 +17,13 @@ class PokemonDetailsViewController: BaseViewController<PokemonDetailsViewControl
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        pokemonStatCollectionView.backgroundColor = .clear
-        
+        configureCollectionView()
         coordinator.load()
     }
     
     func loadDetails(pokemon: PokemonDetails, imageUrl: String) {
         view.backgroundColor = pokemon.types.sorted { $0.slot < $1.slot }.first?.type.name.color
-        configureColleetionView()
         setupDataSource(items: pokemon.statList, imageUrl: imageUrl)
-    }
-
-    private func configureColleetionView() {
-        view.addSubview(pokemonStatCollectionView)
-        pokemonStatCollectionView.pinEdges(to: view)
     }
     
     func setupDataSource(items: [EasyStatistics], imageUrl: String) {
@@ -61,5 +54,18 @@ class PokemonDetailsViewController: BaseViewController<PokemonDetailsViewControl
             self.pokemonStatCollectionView.dataSource = self.dataSource
             self.pokemonStatCollectionView.delegate = self.dataSource
         }
+    }
+    
+    private func configureCollectionView() {
+        pokemonStatCollectionView.backgroundColor = .clear
+        pokemonStatCollectionView.accessibilityIdentifier = Identifier.statsCollectionView.rawValue
+        view.addSubview(pokemonStatCollectionView)
+        pokemonStatCollectionView.pinEdges(to: view)
+    }
+}
+
+extension PokemonDetailsViewController {
+    enum Identifier: String {
+        case statsCollectionView
     }
 }

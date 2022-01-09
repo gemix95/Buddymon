@@ -13,6 +13,7 @@ class PokemonImageCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.accessibilityIdentifier = Identifier.imageCell.rawValue
         setupUI()
     }
     
@@ -29,5 +30,11 @@ class PokemonImageCollectionViewCell: UICollectionViewCell {
     func configure(with imageURL: String) {
         imageView.sd_imageTransition = .fade
         imageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "pokeball"), options: [.continueInBackground, .retryFailed], completed: nil)
+    }
+}
+
+extension PokemonImageCollectionViewCell {
+    enum Identifier: String {
+        case imageCell
     }
 }
