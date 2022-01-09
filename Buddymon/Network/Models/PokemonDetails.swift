@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct PokemonDetails: Codable {
+public struct PokemonDetails: Codable {
     let types: [TypeElement]
     let height, weight: Double
     let abilities: [AbilityElement]

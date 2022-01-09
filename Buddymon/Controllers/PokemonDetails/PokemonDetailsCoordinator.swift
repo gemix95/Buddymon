@@ -16,7 +16,7 @@ class PokemonDetailsCoordinator: BaseCoordinator<PokemonDetailsViewController, P
         view.title = param.name
         
         context.messenger.loader.showLoading()
-        PokemonAPIManager.shared.getPokemonDetail(id: param.id) { [weak self] result in
+        context.networker.getPokemonDetail(id: param.id) { [weak self] result in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.context.messenger.loader.stopLoading()

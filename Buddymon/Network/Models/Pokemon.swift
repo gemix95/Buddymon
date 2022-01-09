@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PokemonResponse: Codable {
+public struct PokemonResponse: Codable {
     let results: [Pokemon]
 }
 

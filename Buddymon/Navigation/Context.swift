@@ -10,9 +10,11 @@ import Foundation
 public struct Context {
     public let navigator: Navigator
     public let messenger: Messenger
+    public let networker: NetworkServices
     
-    public init(navigator: Navigator, messenger: Messenger) {
+    public init(navigator: Navigator, messenger: Messenger, networker: NetworkServices) {
         self.messenger = messenger
         self.navigator = navigator
+        self.networker = networker
     }
 }

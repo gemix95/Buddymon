@@ -13,8 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let navigator: Navigator = StandardNavigator()
     let messenger: Messenger = StandardMessenger()
+    let networker: NetworkServices = NetworkServiceCore(networkable: Requestable())
     
-    private lazy var context = Context(navigator: navigator, messenger: messenger)
+    private lazy var context = Context(navigator: navigator, messenger: messenger, networker: networker)
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = navigator.start(coordinator: PokemonListCoordinator(context: context, param: Void()), animated: false)

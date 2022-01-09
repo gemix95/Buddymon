@@ -16,13 +16,13 @@ class PokemonListCoordinator: BaseCoordinator<PokemonListViewController, Void>, 
     
     func load() {
         context.messenger.loader.showLoading()
-        PokemonAPIManager.shared.get(listLenght: 809) { [weak self] result in
+        context.networker.get(listLenght: 889) { [weak self] result in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.context.messenger.loader.stopLoading()
                 switch result {
                 case .success(let pokomonList):
-                    self.view.updateDataSource(items: pokomonList)
+                    self.view.updateDataSource(items: pokomonList.results)
                 case .failure(let error):
                     self.context.messenger.alert.show(message: error.localized)
                 }
