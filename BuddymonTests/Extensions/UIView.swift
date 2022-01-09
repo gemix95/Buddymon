@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-extension UIView {
-
-    public func getView<T: UIView>(_ identifier: String) throws -> T {
+public extension UIView {
+    
+    func getView<T: UIView>(_ identifier: String) throws -> T {
         let matchingViews: [T] = getSubviews(from: self)
 
         guard !matchingViews.isEmpty else {
@@ -24,7 +24,7 @@ extension UIView {
         return matchingView
     }
 
-    public func getSubviews<T: UIView>(matching type: T.Type) -> [T] {
+    func getSubviews<T: UIView>(matching type: T.Type) -> [T] {
         getSubviews(from: self)
     }
 

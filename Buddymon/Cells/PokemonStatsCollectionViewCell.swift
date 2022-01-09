@@ -48,14 +48,23 @@ class PokemonStatsCollectionViewCell: UICollectionViewCell {
         stack.addArrangedSubview(statNameLabel)
         stack.addArrangedSubview(statValueLabel)
         
+        statNameLabel.accessibilityIdentifier = Identifiers.nameLabel.rawValue
         statNameLabel.font = UIFont.systemFont(ofSize: 16, weight: .light)
-        statValueLabel.font = UIFont.systemFont(ofSize: 16, weight: .light)
         statNameLabel.textAlignment = .left
+        statValueLabel.accessibilityIdentifier = Identifiers.valueLabel.rawValue
+        statValueLabel.font = UIFont.systemFont(ofSize: 16, weight: .light)
         statValueLabel.textAlignment = .right
     }
     
     func configure(with stat: EasyStatistics) {
         statNameLabel.text = stat.name
         statValueLabel.text = stat.value
+    }
+}
+
+extension PokemonStatsCollectionViewCell {
+    enum Identifiers: String {
+        case nameLabel
+        case valueLabel
     }
 }
