@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private lazy var context = Context(navigator: navigator, messenger: messenger, networker: networker)
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = navigator.start(coordinator: PokemonListCoordinator(context: context, param: Void()), animated: false)
+        let param = PokemonListParam(factory: PokemonListFactory())
+        window = navigator.start(coordinator: PokemonListCoordinator(context: context, param: param), animated: false)
         window?.makeKeyAndVisible()
         
         return true

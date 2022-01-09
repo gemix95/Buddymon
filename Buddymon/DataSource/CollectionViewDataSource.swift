@@ -14,13 +14,11 @@ class CollectionViewDataSource<C: UICollectionViewCell, T>: NSObject, UICollecti
     private var items: [T]
     private var configureCell: CellHandler
     private var tappedCell: CellHandler
-    private var cellHeight: CGFloat
     
-    public init(items: [T], configureCell: @escaping CellHandler, tappedCell: @escaping CellHandler, cellHeight: CGFloat) {
+    public init(items: [T], configureCell: @escaping CellHandler, tappedCell: @escaping CellHandler) {
         self.items = items
         self.configureCell = configureCell
         self.tappedCell = tappedCell
-        self.cellHeight = cellHeight
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

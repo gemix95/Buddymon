@@ -22,6 +22,7 @@ extension UIView {
         trailingAnchor.constraint(equalTo: other.trailingAnchor).isActive = true
         topAnchor.constraint(equalTo: other.topAnchor).isActive = true
         bottomAnchor.constraint(equalTo: other.bottomAnchor).isActive = true
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
     func removeAllSubViews(tag: Int) {

@@ -6,13 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
-protocol PokemonListViewControllerDelegate {
-    func load()
-    func goToDetail(pokemon: Pokemon)
+struct PokemonListParam {
+    let factory: PokemonListFactory
 }
 
-class PokemonListCoordinator: BaseCoordinator<PokemonListViewController, Void>, PokemonListViewControllerDelegate {
+class PokemonListCoordinator: BaseCoordinator<PokemonListViewController, PokemonListParam>, PokemonListViewControllerDelegate {
     
     func load() {
         context.messenger.loader.showLoading()
@@ -33,5 +33,9 @@ class PokemonListCoordinator: BaseCoordinator<PokemonListViewController, Void>, 
     func goToDetail(pokemon: Pokemon) {
         let coordinator = PokemonDetailsCoordinator(context: context, param: pokemon)
         context.navigator.navigate(to: coordinator, animated: true)
+    }
+    
+    func makeCollectionView(width: CGFloat) -> UICollectionView {
+        param.factory.makeCollectionView(width: width)
     }
 }

@@ -18,10 +18,6 @@ class PokemonListTableViewCell: UITableViewCell {
     
     private var pokemonNameLabel: UILabel?
     private var pokemonImgView: UIImageView?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 
     func prepareUI() {
         clipsToBounds = false

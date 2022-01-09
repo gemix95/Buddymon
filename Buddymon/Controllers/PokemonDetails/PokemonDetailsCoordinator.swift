@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol PokemonDetailsViewControllerDelegate {
-    func load()
-}
-
 class PokemonDetailsCoordinator: BaseCoordinator<PokemonDetailsViewController, Pokemon>, PokemonDetailsViewControllerDelegate {
     func load() {
         view.title = param.name
