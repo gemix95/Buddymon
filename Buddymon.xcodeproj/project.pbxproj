@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,8 +12,6 @@
 		10444CF6278B25E60087EF3A /* PokemonDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444CF5278B25E60087EF3A /* PokemonDetailsFactory.swift */; };
 		10444CF8278B28780087EF3A /* PokemonStatsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444CF7278B28780087EF3A /* PokemonStatsCollectionViewCell.swift */; };
 		10444CFA278B43DE0087EF3A /* PokemonImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444CF9278B43DE0087EF3A /* PokemonImageCollectionViewCell.swift */; };
-		10444DA1278B4D760087EF3A /* CoreNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10444D9E278B4D350087EF3A /* CoreNetwork.framework */; platformFilter = ios; };
-		10444DA2278B4D760087EF3A /* CoreNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10444D9E278B4D350087EF3A /* CoreNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		10444DCC278B77950087EF3A /* PokemonListCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DCB278B77950087EF3A /* PokemonListCellTests.swift */; };
 		10444DD0278B78280087EF3A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DCF278B78280087EF3A /* UIView.swift */; };
 		10444DD2278B78630087EF3A /* ViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DD1278B78630087EF3A /* ViewError.swift */; };
@@ -59,20 +57,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		10444D9D278B4D350087EF3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 10444D98278B4D350087EF3A /* CoreNetwork.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 10444D80278B4D340087EF3A;
-			remoteInfo = CoreNetwork;
-		};
-		10444D9F278B4D350087EF3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 10444D98278B4D350087EF3A /* CoreNetwork.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 10444D88278B4D350087EF3A;
-			remoteInfo = CoreNetworkTests;
-		};
 		1725023225C2B6C0006C85C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1725021325C2B6BF006C85C5 /* Project object */;
@@ -96,7 +80,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				10444DA2278B4D760087EF3A /* CoreNetwork.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,7 +94,6 @@
 		10444CF7278B28780087EF3A /* PokemonStatsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonStatsCollectionViewCell.swift; sourceTree = "<group>"; };
 		10444CF9278B43DE0087EF3A /* PokemonImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		10444D72278B4AB20087EF3A /* CoreNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		10444D98278B4D350087EF3A /* CoreNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreNetwork.xcodeproj; path = CoreNetwork/CoreNetwork.xcodeproj; sourceTree = "<group>"; };
 		10444DCB278B77950087EF3A /* PokemonListCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListCellTests.swift; sourceTree = "<group>"; };
 		10444DCF278B78280087EF3A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		10444DD1278B78630087EF3A /* ViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewError.swift; sourceTree = "<group>"; };
@@ -148,7 +130,7 @@
 		1725021B25C2B6BF006C85C5 /* Buddymon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buddymon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1725021E25C2B6BF006C85C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1725022225C2B6BF006C85C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1725022725C2B6C0006C85C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1725022725C2B6C0006C85C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Buddymon/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		1725022A25C2B6C0006C85C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1725022C25C2B6C0006C85C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1725023125C2B6C0006C85C5 /* BuddymonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuddymonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,7 +154,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10444DA1278B4D760087EF3A /* CoreNetwork.framework in Frameworks */,
 				E36141054F3E7415EEE8BE72 /* Pods_Buddymon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,15 +177,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10444D99278B4D350087EF3A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				10444D9E278B4D350087EF3A /* CoreNetwork.framework */,
-				10444DA0278B4D350087EF3A /* CoreNetworkTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		10444DCA278B776D0087EF3A /* CellsTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,7 +321,6 @@
 		1725021225C2B6BF006C85C5 = {
 			isa = PBXGroup;
 			children = (
-				10444D98278B4D350087EF3A /* CoreNetwork.xcodeproj */,
 				1725021D25C2B6BF006C85C5 /* Buddymon */,
 				1725023425C2B6C0006C85C5 /* BuddymonTests */,
 				1725023F25C2B6C0006C85C5 /* BuddymonUITests */,
@@ -527,12 +498,6 @@
 			mainGroup = 1725021225C2B6BF006C85C5;
 			productRefGroup = 1725021C25C2B6BF006C85C5 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 10444D99278B4D350087EF3A /* Products */;
-					ProjectRef = 10444D98278B4D350087EF3A /* CoreNetwork.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				1725021A25C2B6BF006C85C5 /* Buddymon */,
@@ -541,23 +506,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		10444D9E278B4D350087EF3A /* CoreNetwork.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CoreNetwork.framework;
-			remoteRef = 10444D9D278B4D350087EF3A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		10444DA0278B4D350087EF3A /* CoreNetworkTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = CoreNetworkTests.xctest;
-			remoteRef = 10444D9F278B4D350087EF3A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1725021925C2B6BF006C85C5 /* Resources */ = {
@@ -901,6 +849,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 877TVCMM54;
 				INFOPLIST_FILE = Buddymon/Info.plist;
@@ -921,6 +870,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 877TVCMM54;
 				INFOPLIST_FILE = Buddymon/Info.plist;
