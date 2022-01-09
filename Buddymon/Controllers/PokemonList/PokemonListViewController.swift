@@ -20,6 +20,7 @@ class PokemonListViewController: BaseViewController<PokemonListViewControllerDel
     }
     
     private func configureCollectionView() {
+        pokemonCollectionView.accessibilityIdentifier = Identifier.pokemonCollectionView.rawValue
         view.addSubview(pokemonCollectionView)
         pokemonCollectionView.pinEdges(to: view)
     }
@@ -45,5 +46,11 @@ class PokemonListViewController: BaseViewController<PokemonListViewControllerDel
             self.pokemonCollectionView.dataSource = self.dataSource
             self.pokemonCollectionView.delegate = self.dataSource
         }
+    }
+}
+
+extension PokemonListViewController {
+    enum Identifier: String {
+        case pokemonCollectionView
     }
 }
