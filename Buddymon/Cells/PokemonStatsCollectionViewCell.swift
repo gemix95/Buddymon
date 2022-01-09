@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreNetwork
 
 class PokemonStatsCollectionViewCell: UICollectionViewCell {
     private var statNameLabel = UILabel()

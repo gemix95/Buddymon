@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import CoreNetwork
 
 class PokemonListCollectionViewCell: UICollectionViewCell {
     private var pokemonNameLabel = UILabel()

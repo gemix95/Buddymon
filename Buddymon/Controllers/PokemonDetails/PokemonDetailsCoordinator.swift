@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreNetwork
 
 struct PokemonDetailsParam {
     let pokemon: Pokemon

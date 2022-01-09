@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreNetwork
 
 public struct Context {
     public let navigator: Navigator

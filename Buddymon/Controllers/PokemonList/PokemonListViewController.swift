@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreNetwork
 
 class PokemonListViewController: BaseViewController<PokemonListViewControllerDelegate> {
     private lazy var pokemonCollectionView: UICollectionView = coordinator.makeCollectionView(width: view.frame.width)

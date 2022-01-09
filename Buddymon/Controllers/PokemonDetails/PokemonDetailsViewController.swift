@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import CoreNetwork
 
 class PokemonDetailsViewController: BaseViewController<PokemonDetailsViewControllerDelegate> {
     private lazy var pokemonStatCollectionView = coordinator.makeCollectionView(width: view.frame.width)

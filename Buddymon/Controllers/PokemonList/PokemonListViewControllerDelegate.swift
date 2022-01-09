@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreNetwork
 
 protocol PokemonListViewControllerDelegate {
     func load()
