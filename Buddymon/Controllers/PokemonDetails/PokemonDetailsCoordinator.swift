@@ -24,6 +24,7 @@ class PokemonDetailsCoordinator: BaseCoordinator<PokemonDetailsViewController, P
                 self.context.messenger.loader.stopLoading()
                 switch result {
                 case .success(let pokemonDetails):
+                    self.view.configureMainImage(pokemon: pokemonDetails, imageUrl: self.param.pokemon.imageUrl)
                     self.view.loadDetails(pokemon: pokemonDetails, imageUrl: self.param.pokemon.imageUrl)
                 case .failure(let error):
                     self.context.messenger.alert.show(message: error.localized, confirm: "Ok") { [weak self] _ in
