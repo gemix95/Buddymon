@@ -10,14 +10,14 @@
 		10444D89278B4D350087EF3A /* CoreNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10444D80278B4D340087EF3A /* CoreNetwork.framework */; };
 		10444D8E278B4D350087EF3A /* CoreNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444D8D278B4D350087EF3A /* CoreNetworkTests.swift */; };
 		10444D8F278B4D350087EF3A /* CoreNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 10444D83278B4D340087EF3A /* CoreNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		10444DAF278B4D8D0087EF3A /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DA5278B4D8D0087EF3A /* Requestable.swift */; };
-		10444DB0278B4D8D0087EF3A /* APIsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DA6278B4D8D0087EF3A /* APIsError.swift */; };
-		10444DB1278B4D8D0087EF3A /* PokemonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DA8278B4D8D0087EF3A /* PokemonDetails.swift */; };
-		10444DB2278B4D8D0087EF3A /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DA9278B4D8D0087EF3A /* Pokemon.swift */; };
-		10444DB3278B4D8D0087EF3A /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DAA278B4D8D0087EF3A /* HTTPMethods.swift */; };
-		10444DB4278B4D8D0087EF3A /* NetworkServiceCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DAB278B4D8D0087EF3A /* NetworkServiceCore.swift */; };
-		10444DB5278B4D8D0087EF3A /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DAD278B4D8D0087EF3A /* NetworkServices.swift */; };
-		10444DB6278B4D8D0087EF3A /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DAE278B4D8D0087EF3A /* Networkable.swift */; };
+		10444DBC278B4EE30087EF3A /* PokemonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DBA278B4EE30087EF3A /* PokemonDetails.swift */; };
+		10444DBD278B4EE30087EF3A /* PokemonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DBB278B4EE30087EF3A /* PokemonResponse.swift */; };
+		10444DC0278B4F010087EF3A /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DBE278B4F010087EF3A /* NetworkServices.swift */; };
+		10444DC1278B4F010087EF3A /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DBF278B4F010087EF3A /* Networkable.swift */; };
+		10444DC6278B4F160087EF3A /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DC2278B4F150087EF3A /* Requestable.swift */; };
+		10444DC7278B4F160087EF3A /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DC3278B4F150087EF3A /* HttpMethods.swift */; };
+		10444DC8278B4F160087EF3A /* APIsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DC4278B4F160087EF3A /* APIsError.swift */; };
+		10444DC9278B4F160087EF3A /* NetworkServiceCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444DC5278B4F160087EF3A /* NetworkServiceCore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,14 +35,14 @@
 		10444D83278B4D340087EF3A /* CoreNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreNetwork.h; sourceTree = "<group>"; };
 		10444D88278B4D350087EF3A /* CoreNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10444D8D278B4D350087EF3A /* CoreNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNetworkTests.swift; sourceTree = "<group>"; };
-		10444DA5278B4D8D0087EF3A /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
-		10444DA6278B4D8D0087EF3A /* APIsError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIsError.swift; sourceTree = "<group>"; };
-		10444DA8278B4D8D0087EF3A /* PokemonDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetails.swift; sourceTree = "<group>"; };
-		10444DA9278B4D8D0087EF3A /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
-		10444DAA278B4D8D0087EF3A /* HTTPMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
-		10444DAB278B4D8D0087EF3A /* NetworkServiceCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceCore.swift; sourceTree = "<group>"; };
-		10444DAD278B4D8D0087EF3A /* NetworkServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
-		10444DAE278B4D8D0087EF3A /* Networkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		10444DBA278B4EE30087EF3A /* PokemonDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetails.swift; sourceTree = "<group>"; };
+		10444DBB278B4EE30087EF3A /* PokemonResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonResponse.swift; sourceTree = "<group>"; };
+		10444DBE278B4F010087EF3A /* NetworkServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
+		10444DBF278B4F010087EF3A /* Networkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		10444DC2278B4F150087EF3A /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		10444DC3278B4F150087EF3A /* HttpMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
+		10444DC4278B4F160087EF3A /* APIsError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIsError.swift; sourceTree = "<group>"; };
+		10444DC5278B4F160087EF3A /* NetworkServiceCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceCore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 		10444D82278B4D340087EF3A /* CoreNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				10444DA4278B4D8D0087EF3A /* Network */,
+				10444DB7278B4DF80087EF3A /* Network */,
 				10444D83278B4D340087EF3A /* CoreNetwork.h */,
 			);
 			path = CoreNetwork;
@@ -99,34 +99,33 @@
 			path = CoreNetworkTests;
 			sourceTree = "<group>";
 		};
-		10444DA4278B4D8D0087EF3A /* Network */ = {
+		10444DB7278B4DF80087EF3A /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				10444DA5278B4D8D0087EF3A /* Requestable.swift */,
-				10444DA6278B4D8D0087EF3A /* APIsError.swift */,
-				10444DA7278B4D8D0087EF3A /* Models */,
-				10444DAA278B4D8D0087EF3A /* HTTPMethods.swift */,
-				10444DAB278B4D8D0087EF3A /* NetworkServiceCore.swift */,
-				10444DAC278B4D8D0087EF3A /* Protocols */,
+				10444DC4278B4F160087EF3A /* APIsError.swift */,
+				10444DC3278B4F150087EF3A /* HttpMethods.swift */,
+				10444DC5278B4F160087EF3A /* NetworkServiceCore.swift */,
+				10444DC2278B4F150087EF3A /* Requestable.swift */,
+				10444DB8278B4DF80087EF3A /* Models */,
+				10444DB9278B4DF80087EF3A /* Protocols */,
 			);
-			name = Network;
-			path = ../../../../Network;
+			path = Network;
 			sourceTree = "<group>";
 		};
-		10444DA7278B4D8D0087EF3A /* Models */ = {
+		10444DB8278B4DF80087EF3A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				10444DA8278B4D8D0087EF3A /* PokemonDetails.swift */,
-				10444DA9278B4D8D0087EF3A /* Pokemon.swift */,
+				10444DBA278B4EE30087EF3A /* PokemonDetails.swift */,
+				10444DBB278B4EE30087EF3A /* PokemonResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		10444DAC278B4D8D0087EF3A /* Protocols */ = {
+		10444DB9278B4DF80087EF3A /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				10444DAD278B4D8D0087EF3A /* NetworkServices.swift */,
-				10444DAE278B4D8D0087EF3A /* Networkable.swift */,
+				10444DBF278B4F010087EF3A /* Networkable.swift */,
+				10444DBE278B4F010087EF3A /* NetworkServices.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -193,6 +192,7 @@
 				TargetAttributes = {
 					10444D7F278B4D340087EF3A = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					10444D87278B4D350087EF3A = {
 						CreatedOnToolsVersion = 13.1;
@@ -240,14 +240,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10444DB3278B4D8D0087EF3A /* HTTPMethods.swift in Sources */,
-				10444DB4278B4D8D0087EF3A /* NetworkServiceCore.swift in Sources */,
-				10444DB6278B4D8D0087EF3A /* Networkable.swift in Sources */,
-				10444DAF278B4D8D0087EF3A /* Requestable.swift in Sources */,
-				10444DB2278B4D8D0087EF3A /* Pokemon.swift in Sources */,
-				10444DB5278B4D8D0087EF3A /* NetworkServices.swift in Sources */,
-				10444DB0278B4D8D0087EF3A /* APIsError.swift in Sources */,
-				10444DB1278B4D8D0087EF3A /* PokemonDetails.swift in Sources */,
+				10444DC6278B4F160087EF3A /* Requestable.swift in Sources */,
+				10444DC0278B4F010087EF3A /* NetworkServices.swift in Sources */,
+				10444DC7278B4F160087EF3A /* HttpMethods.swift in Sources */,
+				10444DBD278B4EE30087EF3A /* PokemonResponse.swift in Sources */,
+				10444DC8278B4F160087EF3A /* APIsError.swift in Sources */,
+				10444DC1278B4F010087EF3A /* Networkable.swift in Sources */,
+				10444DBC278B4EE30087EF3A /* PokemonDetails.swift in Sources */,
+				10444DC9278B4F160087EF3A /* NetworkServiceCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +395,7 @@
 		10444D93278B4D350087EF3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -416,6 +417,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -424,6 +426,7 @@
 		10444D94278B4D350087EF3A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
