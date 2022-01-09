@@ -5,7 +5,7 @@
       location = "group:Buddymon.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../../CoreNetwork/CoreNetwork.xcodeproj">
+      location = "group:CoreNetwork/CoreNetwork.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

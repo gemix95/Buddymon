@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,8 +11,8 @@
 		10444CF6278B25E60087EF3A /* PokemonDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444CF5278B25E60087EF3A /* PokemonDetailsFactory.swift */; };
 		10444CF8278B28780087EF3A /* PokemonStatsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444CF7278B28780087EF3A /* PokemonStatsCollectionViewCell.swift */; };
 		10444CFA278B43DE0087EF3A /* PokemonImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10444CF9278B43DE0087EF3A /* PokemonImageCollectionViewCell.swift */; };
-		10444D73278B4AB20087EF3A /* CoreNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10444D72278B4AB20087EF3A /* CoreNetwork.framework */; };
-		10444D74278B4AB20087EF3A /* CoreNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10444D72278B4AB20087EF3A /* CoreNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10444DA1278B4D760087EF3A /* CoreNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10444D9E278B4D350087EF3A /* CoreNetwork.framework */; platformFilter = ios; };
+		10444DA2278B4D760087EF3A /* CoreNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10444D9E278B4D350087EF3A /* CoreNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		107DC65325C35EB4001EACD0 /* PokemonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107DC65225C35EB4001EACD0 /* PokemonListViewController.swift */; };
 		107DC65B25C35EC4001EACD0 /* PokemonListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107DC65A25C35EC4001EACD0 /* PokemonListCoordinator.swift */; };
 		107DC68425C365FF001EACD0 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107DC68325C365FF001EACD0 /* UITableViewCell+Extension.swift */; };
@@ -51,6 +51,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		10444D9D278B4D350087EF3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10444D98278B4D350087EF3A /* CoreNetwork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 10444D80278B4D340087EF3A;
+			remoteInfo = CoreNetwork;
+		};
+		10444D9F278B4D350087EF3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10444D98278B4D350087EF3A /* CoreNetwork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 10444D88278B4D350087EF3A;
+			remoteInfo = CoreNetworkTests;
+		};
 		1725023225C2B6C0006C85C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1725021325C2B6BF006C85C5 /* Project object */;
@@ -68,13 +82,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		10444D75278B4AB30087EF3A /* Embed Frameworks */ = {
+		10444DA3278B4D760087EF3A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				10444D74278B4AB20087EF3A /* CoreNetwork.framework in Embed Frameworks */,
+				10444DA2278B4D760087EF3A /* CoreNetwork.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +102,7 @@
 		10444CF7278B28780087EF3A /* PokemonStatsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonStatsCollectionViewCell.swift; sourceTree = "<group>"; };
 		10444CF9278B43DE0087EF3A /* PokemonImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		10444D72278B4AB20087EF3A /* CoreNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10444D98278B4D350087EF3A /* CoreNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreNetwork.xcodeproj; path = CoreNetwork/CoreNetwork.xcodeproj; sourceTree = "<group>"; };
 		107DC65225C35EB4001EACD0 /* PokemonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListViewController.swift; sourceTree = "<group>"; };
 		107DC65A25C35EC4001EACD0 /* PokemonListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListCoordinator.swift; sourceTree = "<group>"; };
 		107DC68325C365FF001EACD0 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
@@ -141,7 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10444D73278B4AB20087EF3A /* CoreNetwork.framework in Frameworks */,
+				10444DA1278B4D760087EF3A /* CoreNetwork.framework in Frameworks */,
 				E36141054F3E7415EEE8BE72 /* Pods_Buddymon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +180,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10444D99278B4D350087EF3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10444D9E278B4D350087EF3A /* CoreNetwork.framework */,
+				10444DA0278B4D350087EF3A /* CoreNetworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		107DC65025C35E93001EACD0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +297,7 @@
 		1725021225C2B6BF006C85C5 = {
 			isa = PBXGroup;
 			children = (
+				10444D98278B4D350087EF3A /* CoreNetwork.xcodeproj */,
 				1725021D25C2B6BF006C85C5 /* Buddymon */,
 				1725023425C2B6C0006C85C5 /* BuddymonTests */,
 				1725023F25C2B6C0006C85C5 /* BuddymonUITests */,
@@ -363,7 +388,7 @@
 				1725021825C2B6BF006C85C5 /* Frameworks */,
 				1725021925C2B6BF006C85C5 /* Resources */,
 				99366262158252830FE6517E /* [CP] Embed Pods Frameworks */,
-				10444D75278B4AB30087EF3A /* Embed Frameworks */,
+				10444DA3278B4D760087EF3A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -446,6 +471,12 @@
 			mainGroup = 1725021225C2B6BF006C85C5;
 			productRefGroup = 1725021C25C2B6BF006C85C5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 10444D99278B4D350087EF3A /* Products */;
+					ProjectRef = 10444D98278B4D350087EF3A /* CoreNetwork.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1725021A25C2B6BF006C85C5 /* Buddymon */,
@@ -454,6 +485,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		10444D9E278B4D350087EF3A /* CoreNetwork.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CoreNetwork.framework;
+			remoteRef = 10444D9D278B4D350087EF3A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		10444DA0278B4D350087EF3A /* CoreNetworkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CoreNetworkTests.xctest;
+			remoteRef = 10444D9F278B4D350087EF3A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1725021925C2B6BF006C85C5 /* Resources */ = {
