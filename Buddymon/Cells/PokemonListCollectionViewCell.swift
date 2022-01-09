@@ -51,8 +51,10 @@ class PokemonListCollectionViewCell: UICollectionViewCell {
         pokemonImgView.contentMode = .scaleAspectFit
         stack.addArrangedSubview(pokemonImgView)
         pokemonImgView.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        pokemonImgView.accessibilityIdentifier = Identifiers.pokemonImage.rawValue
         
         pokemonNameLabel.font = UIFont.systemFont(ofSize: 20, weight: .light)
+        pokemonNameLabel.accessibilityIdentifier = Identifiers.pokemonName.rawValue
         stack.addArrangedSubview(pokemonNameLabel)
     }
     
@@ -61,5 +63,12 @@ class PokemonListCollectionViewCell: UICollectionViewCell {
         pokemonImgView.sd_imageTransition = .fade
         pokemonImgView.sd_setImage(with: url, placeholderImage: UIImage(named: "pokeball"), options: [.continueInBackground, .retryFailed], completed: nil)
         pokemonNameLabel.text = pokemon.name
+    }
+}
+
+extension PokemonListCollectionViewCell {
+    enum Identifiers: String {
+        case pokemonName
+        case pokemonImage
     }
 }
