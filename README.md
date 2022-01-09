@@ -1,13 +1,13 @@
 # Buddymon
 
-Buddymon è un pokedex che utilizza le API di [pokeapi.co](https://pokeapi.co/) per mostrare informazioni e statistiche su una lista di oltre 800 pokemons.
+Buddymon is a pokedex that uses the API from [pokeapi.co](https://pokeapi.co/) to display information and statistics on a list of over 800 pokemons.
 
-## Architettura
-Di seguito i punti chiave dell'architettura dell'app:
+## Architecture
+The following are the key points of the app's architecture:
 
 ```
-- L'app utilizza un architettura MVVM con l'aiuto di Coordinator
-- L'app non utilizza né storyboard né xib
-- Uso di generics per i dataSource delle tableView
-- Utilizzo di un solo pod per il download e lo store in cache delle immagini: 'SDWebImage'
+- The app uses an MVVM architecture with the help of Coordinator
+- The app doesn't use storyboards or xibs
+- Use of generics for tableView dataSources
+- Use of only one pod for downloading and caching images: 'SDWebImage'.
 ```
